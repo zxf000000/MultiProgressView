@@ -64,20 +64,20 @@ class LayoutProvider: LayoutProvidable {
   func cornerRadius(_ progressView: MultiProgressView) -> CGFloat {
     switch progressView.lineCap {
     case .round:
-      return progressView.cornerRadius == 0 ?
-        progressView.bounds.height / 2 : progressView.cornerRadius
+      return progressView.my_cornerRadius == 0 ?
+        progressView.bounds.height / 2 : progressView.my_cornerRadius
     case .butt, .square:
       return 0
     }
   }
 
   func trackCornerRadius(_ progressView: MultiProgressView) -> CGFloat {
-    let cornerRadiusFactor = progressView.cornerRadius / progressView.bounds.height
+    let cornerRadiusFactor = progressView.my_cornerRadius / progressView.bounds.height
     let trackHeight = progressView.track.bounds.height
 
     switch progressView.lineCap {
     case .round:
-      return progressView.cornerRadius == 0 ?
+      return progressView.my_cornerRadius == 0 ?
         trackHeight / 2 : cornerRadiusFactor * trackHeight
     case .butt, .square:
       return 0

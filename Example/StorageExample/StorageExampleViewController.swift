@@ -39,7 +39,7 @@ class StorageExampleViewController: UIViewController {
     let progress = MultiProgressView()
     progress.trackBackgroundColor = UIColor.StorageExample.progressBackground
     progress.lineCap = .round
-    progress.cornerRadius = progressViewHeight / 4
+    progress.my_cornerRadius = progressViewHeight / 4
     return progress
   }()
 

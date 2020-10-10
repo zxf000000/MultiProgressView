@@ -48,7 +48,7 @@ open class MultiProgressView: UIView, ProgressViewSectionDelegate {
 
   @IBOutlet public weak var delegate: MultiProgressViewDelegate?
 
-  @IBInspectable public var cornerRadius: CGFloat = 0 {
+  @IBInspectable public var my_cornerRadius: CGFloat = 0 {
     didSet {
       updateCornerRadius()
     }
